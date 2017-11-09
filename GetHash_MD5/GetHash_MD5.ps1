@@ -1,0 +1,1 @@
+Get-ChildItem -Recurse -File -exclude result.csv | ForEach-Object { Get-FileHash -Path $_.FullName  -Algorithm md5 } | Export-Csv -Path result.csv -Encoding UTF8
